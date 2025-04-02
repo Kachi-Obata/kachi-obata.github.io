@@ -89,27 +89,30 @@
     
             // Change navbar background on scroll
             const nav = document.querySelector('.sticky-nav');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const lawFirmSection = document.querySelector('#law-firm');
+    
             if (window.scrollY > 100) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
             }
+    
+            // Change nav link color when scrolling past hero section
+            if (lawFirmSection.getBoundingClientRect().top <= 50) {
+                navLinks.forEach(link => link.style.color = 'black');
+            } else {
+                navLinks.forEach(link => link.style.color = 'white');
+            }
         });
     
-        // Show law firm section after hero fades in (immediately on mobile)
+        // Show law firm section after hero fades in
         document.addEventListener("DOMContentLoaded", function() {
-            const lawFirmSection = document.querySelector(".half-page-bg");
-            if (window.innerWidth <= 768) {
-                // Instantly show the section on mobile
+            setTimeout(() => {
+                const lawFirmSection = document.querySelector(".half-page-bg");
                 lawFirmSection.style.opacity = "1";
-                lawFirmSection.style.transform = "translateY(0)";
-            } else {
-                // Apply the 2.5s delay for larger screens
-                setTimeout(() => {
-                    lawFirmSection.style.opacity = "1";
-                    lawFirmSection.style.transform = "translateY(0)";
-                }, 2500);
-            }
+                lawFirmSection.style.transform = "translateY(0)"; // Smooth appearance
+            }, 2500); // Match hero section fade-in timing
         });
     </script>
     
