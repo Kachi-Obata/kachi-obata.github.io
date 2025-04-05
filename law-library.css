@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     text-align: center;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -60,7 +60,7 @@ body.scrolled::before {
 }
 
 .sticky-nav a:hover {
-    background: rgba(0, 128, 0, 0.7); /* Green hover effect */
+    background: #FFD700; /* Gold color on hover */
     color: #fff;
 }
 
@@ -72,7 +72,7 @@ body.scrolled::before {
     height: 100vh;
     background: url('images/Law-library_background.jpg') center/cover no-repeat;
     opacity: 0;
-    animation: fadeIn 4.5s forwards;
+    animation: fadeIn 2.0s forwards;
     background-position: center 43%;
     
 }
@@ -85,6 +85,7 @@ body.scrolled::before {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 0;
 }
 
 .hero-text {
@@ -96,7 +97,7 @@ body.scrolled::before {
     font-family: 'Calisto MT', serif;
     font-size: 3rem;
     line-height: 1.2;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .hero-text .cta-button {
@@ -125,6 +126,46 @@ body.scrolled::before {
     opacity: 1;
     transform: translateY(0);
 }
+
+.half-page-text {
+    position: relative; /* Allows overlapping */
+    z-index: 2; /* Ensures it is above the hero section */
+    width: 45%;
+    text-align: left;
+    padding: 40px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: -50px; /* Moves it up to overlap hero section */
+    margin-left: 65px;
+}
+
+
+.heading-text{
+    color: #fff;
+}
+
+.green-NILR{
+    color: #4CAF50;
+}
+
+.britannica_logo{
+    width: 100px;
+    height: 60px;
+    margin-top: 5px;
+    margin-left: 25px;
+}
+
+.britannica_logo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.britannica_logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
 
 @keyframes fadeIn {
     from {
