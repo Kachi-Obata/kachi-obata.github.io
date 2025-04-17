@@ -32,7 +32,7 @@ body.scrolled .sticky-nav {
     justify-content: flex-end;
     gap: 20px;
     margin: 0;
-    padding: 0;
+    padding-right: 30px;
 }
 
 .sticky-nav li {
@@ -51,7 +51,7 @@ body.scrolled .sticky-nav {
 
 .sticky-nav a:hover {
     background: #FFD700;
-    color: #000;
+    color: #fff;
 }
 
 /* HERO SECTION */
@@ -130,7 +130,7 @@ body.scrolled .sticky-nav {
     z-index: -1;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    animation: fadeIn 3s forwards;
+    animation: fadeIn 0s forwards;
     margin-top: 150px;
 }
 
