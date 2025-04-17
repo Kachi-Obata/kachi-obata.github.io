@@ -126,12 +126,12 @@ body.scrolled .sticky-nav {
     right: 0;
     width: 50%;
     height: 100%;
-    background: url('images/q&a.jpg') center/cover no-repeat;
+    background: url('images/guide-to-business.jpg') center/cover no-repeat;
     z-index: -1;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     animation: fadeIn 0s forwards;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 /* TEXT CONTAINER */
@@ -142,7 +142,7 @@ body.scrolled .sticky-nav {
     background: white;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin-top: 23px;
+    margin-top: -300px;
 }
 
 .half-page-text h2 {
